@@ -1,4 +1,6 @@
-# letmeaskmybutler
+# Let Me Ask My Butler
+
+LMAMB is a clone of [Let Me Google That](http://letmegooglethat.com/) with one small diffrence, a nod to the classic search engine AskJeeves.
 
 ## Instructions for use
 
