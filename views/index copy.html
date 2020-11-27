@@ -12,7 +12,11 @@
 } */
 
 body {
-  background-color: lightgrey;
+  background-color: #ccc;
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }
 
 #example1 {
@@ -28,27 +32,33 @@ body {
   border-radius: 0px;
 }
 
-input[type=submit] {
-/* position: absolute;
-float: right; */
+#example3 {
+  border: 1px solid red;
+  padding: 0px;
+  border-radius: 0px;
+}
+
+/* input[type=submit] {
+position: absolute;
+float: right;
 background-color: #0062b2;
 border: medium none;
 cursor: pointer;
 width: 48px;
 height: 48px;
 
-}
+} */
 
 input[type=text] {
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  width: 75%;
+  /* padding: 12px 20px; */
+  /* margin: 8px 0; */
   height: 48px;
-  display: inline-block;
+  /* display: inline-block; */
   border: 1px solid #ccc;
-  border-radius: 1px;
-  box-sizing: border-box;
-  font-size: 20px;
+  border-radius: 0px;
+  /* box-sizing: border-box; */
+  font-size: 16px;
   text-indent: 15px;
 }
 
@@ -59,21 +69,21 @@ input[type=text] {
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div> -->
 
-<div id="example2">
-  <div id="example1">
-
-<div align="center">
-  <form action="/action_page.php">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ask.com_Logo.svg" alt="Ask Logo" width="133" height="97.05">
-    <input type="text" id="search" name="search">
-    <!-- <input type=submit img src="../images/mag-glass.png" value=" " border="0" alt="Submit" style="width: 50px;"> -->
-         <input type="image" name="submit" src="../images/mag-glass-button.png" border="0" alt="Submit" style="width: 50px;" />
-  </form>
+  <div id="example2">
+    <div id="example1">
+      <div>
+        <div id="example3">
+          <form autocomplete="off" action="/action_page.php">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ask.com_Logo.svg" alt="Ask Logo" width="133" height="97.05">
+            <input type="text" id="search" name="search">
+            <!-- <input type=submit img src="../images/mag-glass.png" value=" " border="0" alt="Submit" style="width: 50px;"> -->
+            <input type="image" name="submit" src="../images/mag-glass-button.png" border="0" alt="Submit" style="width: 50px;" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
-
-</div>
-</div>
-
 
 </body>
 </html>
