@@ -3,12 +3,29 @@
 <head>
 <style>
 
-div {
-/* position: absolute;
+/* div {
+  position:
   left: 50%;
-  top: 50%; */
-  /* -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); */
+  top: 50%;
+  webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+} */
+
+body {
+  background-color: lightgrey;
+}
+
+#example1 {
+  border: 1px solid grey;
+  padding: 302px;
+  border-radius: 6px;
+  background-color: white;
+}
+
+#example2 {
+  border: 11px solid transparent;
+  padding: 0px;
+  border-radius: 0px;
 }
 
 input[type=submit] {
@@ -19,17 +36,8 @@ border: medium none;
 cursor: pointer;
 width: 48px;
 height: 48px;
-right: 0;
 
 }
-
-/* input[type=submit] {
-    background: url(http://lrroberts0122.github.com/DWS/lab6/level-2/images/button.png);
-    border: 0;
-    display: block;
-    height: _the_image_height;
-    width: _the_image_width;
-} */
 
 input[type=text] {
   width: 50%;
@@ -46,17 +54,24 @@ input[type=text] {
 
 </style>
 </head>
-<body>
+<!-- <body>
+  <div align="center">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div> -->
 
-  <img src="../images/mag-glass.svg" alt="Mag Glass">
-    <!-- <img src="/images/" alt="Mag Glass" width="133" height="97.05"> -->
+<div id="example2">
+  <div id="example1">
 
 <div align="center">
   <form action="/action_page.php">
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ask.com_Logo.svg" alt="Ask Logo" width="133" height="97.05">
     <input type="text" id="search" name="search">
-    <input type=submit img src="../images/mag-glass.svg" value=" ">
+    <!-- <input type=submit img src="../images/mag-glass.png" value=" " border="0" alt="Submit" style="width: 50px;"> -->
+         <input type="image" name="submit" src="../images/mag-glass-button.png" border="0" alt="Submit" style="width: 50px;" />
   </form>
+</div>
+
+</div>
 </div>
 
 
