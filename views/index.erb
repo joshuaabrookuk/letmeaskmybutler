@@ -13,5 +13,16 @@
         <input type="submit" value="Submit">
       </form>
     </div>
+    <br>
+    <br>
+    <br>
+    <div align="center">
+      <%=
+      if @search
+      search_query = @search.tr(" ","+")
+      p "http://localhost:4567/web?q=" + search_query
+      end
+      %>
+    </div>
   </body>
 </html>
