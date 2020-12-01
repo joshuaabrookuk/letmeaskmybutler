@@ -9,4 +9,11 @@ feature 'Dummy search engine generates link' do
     click_button 'Submit'
     expect(page).to have_content('http://localhost:4567/web?q=Who+is+Frank+Sinatra?')
   end
+
+  scenario "User sees a message after they generate a link" do
+    visit '/'
+    fill_in('search', with: 'Who is Frank Sinatra?')
+    click_button 'Submit'
+    expect(page).to have_content('Copy the link above or try it out yourself')
+  end
 end
