@@ -8,8 +8,9 @@ class LetMeAskMyButler < Sinatra::Base
     @search = params[:search]
 
     if @search
-      search_query = @search.tr(' ', '+')
-      @search_link = "http://localhost:4567/web?q=#{search_query}"
+      require 'uri'
+      search_query = URI.encode(@search)
+      @search_link = "http://localhost:4567/search?search_query=#{search_query}"
     end
 
     erb :index
