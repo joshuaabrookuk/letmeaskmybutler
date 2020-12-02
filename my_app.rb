@@ -8,8 +8,7 @@ class LetMeAskMyButler < Sinatra::Base
     @search = params[:search]
 
     if @search
-      require 'uri'
-      search_query = URI.encode(@search)
+      search_query = CGI.escape(@search)
       @search_link = "http://localhost:4567/search?search_query=#{search_query}"
     end
 
@@ -17,7 +16,6 @@ class LetMeAskMyButler < Sinatra::Base
   end
 
   get '/search' do
-    p params
     @search_query = params[:search_query]
     erb :search
   end
