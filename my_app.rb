@@ -22,6 +22,10 @@ class LetMeAskMyButler < Sinatra::Base
     # redirect to('https://uk.ask.com/web?q=' + @search_query)
   end
 
+  post '/redirect' do
+      "Hello World"
+    end
+
 
   run! if app_file == $PROGRAM_NAME
 end
