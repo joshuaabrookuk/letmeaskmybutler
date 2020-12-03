@@ -18,8 +18,10 @@ class LetMeAskMyButler < Sinatra::Base
   get '/search' do
     @search_query = params[:search_query]
     erb :search
-    redirect to('https://uk.ask.com/web?q=' + @search_query )
+
+    # redirect to('https://uk.ask.com/web?q=' + @search_query)
   end
+
 
   run! if app_file == $PROGRAM_NAME
 end
