@@ -12,22 +12,19 @@ class LetMeAskMyButler < Sinatra::Base
       @search_query = CGI.escape(@search)
       @search_link = "http://localhost:4567/search?search_query=#{@search_query}"
     end
-
     erb :index
   end
 
   get '/search' do
     @search_query = params[:search_query]
     erb :search
-
   end
 
   get '/redirect' do
     @search = params[:search]
     erb :redirect
-    # redirect to('https://uk.ask.com/web?q=' + @search)
+    redirect to('https://uk.ask.com/web?q=' + @search)
   end
-
 
   run! if app_file == $PROGRAM_NAME
 end
