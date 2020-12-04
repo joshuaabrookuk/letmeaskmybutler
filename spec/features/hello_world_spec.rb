@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # require 'sinatra'
 #
 # feature "Testing That I send the project up correctly" do
