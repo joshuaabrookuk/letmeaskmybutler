@@ -4,6 +4,10 @@ require 'sinatra/base'
 
 # This is my controller
 class LetMeAskMyButler < Sinatra::Base
+  configure do
+    set :public_folder, 'public'
+    set :views, 'app/views'
+  end
 
   get '/' do
     @search = params[:search]
@@ -22,8 +26,9 @@ class LetMeAskMyButler < Sinatra::Base
 
   get '/redirect' do
     @search = params[:search]
+    @search_query = CGI.escape(@search)
+    redirect to("https://uk.ask.com/web?q=#{@search_query}")
     erb :redirect
-    redirect to('https://uk.ask.com/web?q=' + @search)
   end
 
   run! if app_file == $PROGRAM_NAME

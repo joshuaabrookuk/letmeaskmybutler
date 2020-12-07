@@ -9,7 +9,6 @@
 #   end
 # end
 
-
 # frozen_string_literal: true
 
 require 'sinatra'
@@ -20,7 +19,6 @@ feature 'Shareable link grabs params from the title' do
     expect(page).to have_field('search', with: 'Who is Frank Sinatra?')
   end
 end
-
 
 # feature 'Redirection to Ask site' do
 #   scenario "Submit is clicked, user redirected" do
