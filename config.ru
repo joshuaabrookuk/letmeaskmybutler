@@ -1,5 +1,4 @@
 # frozen_string_literal: true
 
-require './my_app'
-
-run LetMeAskMyButler
+require_relative './config/environment'
+run ApplicationController

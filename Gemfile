@@ -7,3 +7,4 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gem 'rspec', '~> 3.5'
 gem 'sinatra', '~> 2.1'
 gem 'capybara', '~> 2.7', '>= 2.7.1'
+gem 'require_all'
