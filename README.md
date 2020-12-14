@@ -3,7 +3,7 @@
 LMAMB is a clone of [Let Me Google That](http://letmegooglethat.com/) with one small diffrence, a nod to the classic search engine AskJeeves.
 
 Here's a mock up I made, which may be aniamte in the future.
-![A Gif](/Users/joshuabrook/Desktop/Projects/post_makers/personal_projects/letmeaskmybutler/public/images/LetMeAskMyButlerMockUpGIF100)
+![A Gif](/public/images/LetMeAskMyButlerMockUpGIF100)
 
 **Senario:**
 
