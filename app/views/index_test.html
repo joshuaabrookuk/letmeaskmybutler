@@ -3,13 +3,6 @@
 <head>
 <style>
 
-/* div {
-  position:
-  left: 50%;
-  top: 50%;
-  webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-} */
 
 body {
   background-color: #ccc;
@@ -19,45 +12,29 @@ textarea:focus, input:focus{
     outline: none;
 }
 
-#example1 {
+#white_boarder_padding {
   border: 1px solid grey;
   padding: 302px;
   border-radius: 6px;
   background-color: white;
 }
 
-#example2 {
+#grey_background {
   border: 11px solid transparent;
   padding: 0px;
   border-radius: 0px;
 }
 
-#example3 {
+#form_padding {
   border: 1px solid red;
-  padding: 0px;
-  border-radius: 0px;
+  padding-bottom: 30px;
 }
-
-/* input[type=submit] {
-position: absolute;
-float: right;
-background-color: #0062b2;
-border: medium none;
-cursor: pointer;
-width: 48px;
-height: 48px;
-
-} */
 
 input[type=text] {
   width: 75%;
-  /* padding: 12px 20px; */
-  /* margin: 8px 0; */
   height: 48px;
-  /* display: inline-block; */
   border: 1px solid #ccc;
   border-radius: 0px;
-  /* box-sizing: border-box; */
   font-size: 16px;
   text-indent: 15px;
 }
@@ -69,23 +46,18 @@ body {
 </style>
 </head>
 <body>
-  <!-- <div align="center">
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  </div> -->
 
-  <div id="example2">
-    <div id="example1">
-      <div>
-        <div id="example3">
-          <form autocomplete="off" action="/action_page.php">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ask.com_Logo.svg" alt="Ask Logo" width="133" height="97.05">
-            <input type="text" id="search" name="search">
-            <!-- <input type=submit img src="../images/mag-glass.png" value=" " border="0" alt="Submit" style="width: 50px;"> -->
-            <input type="image" name="submit" src="../../public/images/mag-glass-button.png" border="0" alt="Submit" style="width: 50px;" />
+  <div id="grey_background">
+    <div id="white_boarder_padding">
+        <form autocomplete="off" action="/action_page.php">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ask.com_Logo.svg" alt="Ask Logo" width="133" height="97.05">
+          <div id="form_padding">
+          <input type="text" id="search" name="search">
+          <input type="image" name="submit" src="../../public/images/mag-glass-button.png" border="0" alt="Submit" style="width: 50px;" />
           </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
   </div>
 </div>
 
