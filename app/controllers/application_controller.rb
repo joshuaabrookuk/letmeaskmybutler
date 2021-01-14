@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
       @search_query = CGI.escape(@search)
       @search_link = "http://localhost:4567/search?search_query=#{@search_query}"
     end
-    erb :index
+    erb :index_merge
   end
 
   get '/search' do
