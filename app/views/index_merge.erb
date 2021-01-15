@@ -5,7 +5,7 @@
 
 
 body {
-  background-color: #ccc;
+  background-color: #e7e7e7;
 }
 
 textarea:focus, input:focus{
@@ -13,7 +13,7 @@ textarea:focus, input:focus{
 }
 
 #white_boarder_padding {
-  border: 1px solid grey;
+  border: 1px solid #c3c3c3;
   padding: 302px;
   border-radius: 6px;
   background-color: white;
@@ -35,7 +35,7 @@ textarea:focus, input:focus{
 }
 
 .grid-item-3 {
-  margin-top: 26px;
+  margin-top: 25px;
 }
 
 .center-container {
@@ -69,30 +69,32 @@ body {
         <div class="grid-item-2">
           <form autocomplete="off" action="/">
             <input type="text" id="search" name="search">
-          </div>
+            </div> <!-- for some reason this div is helping the grid-item-3 div stay in place -->
           <div class="grid-item-3">
-            <input type="image" name="submit" src="../../public/images/mag-glass-button.png" border="0" alt="Submit" style="width: 47px;" />
+            <input type="image" name="submit" src="/images/mag-glass-button.png" border="0" alt="Submit" style="width: 47px;" />
           </div>
         </form>
       </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+    <div align="center">
+      <%= @search_link %>
+    <br>
+    <br>
+      <%= 'Copy the link above or try it out yourself' if @search_link %>
+    </div>
+
     </div>
   </div>
 </div>
 
-<div align="center">
-  <%=
-  @search_link
-  %>
-</div>
-<br>
-<br>
-<div align="center">
-  <%=
-  if @search_link
-  'Copy the link above or try it out yourself'
-  end
-  %>
-</div>
+
+
 
 
 </body>
