@@ -3,7 +3,7 @@
 require 'sinatra/base'
 
 # This is my controller
-class ApplicationController < Sinatra::Base
+class LetMeAskMyButler < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
