@@ -6,6 +6,7 @@
 
 body {
   background-color: #e7e7e7;
+  font-family: Helvetica Neue,Arial,sans-serif;
 }
 
 textarea:focus, input:focus{
@@ -27,24 +28,12 @@ textarea:focus, input:focus{
 
 .grid-container {
   display: grid;
-  grid-template-columns: 163px 600px 50px;
-}
-
-.grid-item-2 {
-  margin-top: 25px;
-}
-
-.grid-item-3 {
-  margin-top: 25px;
-}
-
-.center-container {
-  margin: auto;
-  width: 60%;
+  grid-template-columns: 163px 670px;
+  width: 100%;
 }
 
 input[type=text] {
-  width: 100%;
+  width: 600px;
   height: 48px;
   border: 1px solid #ccc;
   border-radius: 0px;
@@ -52,50 +41,37 @@ input[type=text] {
   text-indent: 15px;
 }
 
-body {
-  font-family: Helvetica Neue,Arial,sans-serif;
+input[type=image] {
+  position: relative;
+  left: -5px;
+  top: 21px;
 }
 
 </style>
 </head>
 <body>
-
   <div id="grey_background">
     <div id="white_boarder_padding">
       <div class="grid-container">
         <div class="grid-item-1">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ask.com_Logo.svg" alt="Ask Logo" width="133" height="97.05">
         </div>
-        <div class="grid-item-2">
-          <form autocomplete="off" action="/">
+        <form autocomplete="off" action="/">
+          <div class="grid-item-2">
             <input type="text" id="search" name="search">
-            </div> <!-- for some reason this div is helping the grid-item-3 div stay in place -->
-          <div class="grid-item-3">
-            <input type="image" name="submit" src="/images/mag-glass-button.png" border="0" alt="Submit" style="width: 47px;" />
+              <input type="image" name="submit" src="/images/mag-glass-button.png" border="0" alt="Submit" style="width: 47px;">
           </div>
         </form>
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-
+    </div>
+    <br>
     <div align="center">
       <%= @search_link %>
-    <br>
-    <br>
-      <%= 'Copy the link above or try it out yourself' if @search_link %>
+      <br>
+      <br>
+        <%= 'Copy the link above or try it out yourself' if @search_link %>
+      </div>
     </div>
-
-    </div>
-  </div>
-</div>
-
-
-
-
 
 </body>
 </html>
