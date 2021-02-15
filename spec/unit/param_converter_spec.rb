@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 require './app/models/param_converter'
 
-describe Param_Converter::MyParam_Converter do
+describe ParamConverter::MyParamConverter do
   it { should respond_to :converter }
 end

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-
 # Trying to check if the /redirect route renders the params but it never will becuase it redirects before it renders
 
 # require 'sinatra'

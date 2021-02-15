@@ -1,7 +1,8 @@
-module Param_Converter
-  class MyParam_Converter
+# frozen_string_literal: true
 
-    def converter
-    end 
+module ParamConverter
+  # MyParamConverter class taskes  string and returns the correct format
+  class MyParamConverter
+    def converter; end
   end
 end
