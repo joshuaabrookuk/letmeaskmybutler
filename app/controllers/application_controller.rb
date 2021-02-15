@@ -2,9 +2,9 @@
 
 require 'sinatra/base'
 
-require './app/models/param_converter.rb'
-converting = ParamConverter::MyParamConverter.new
-converting.converter
+# require './app/models/param_converter.rb'
+# converting = ParamConverter::MyParamConverter.new
+# converting.converter
 
 
 # This is my controller
