@@ -4,7 +4,7 @@ module ParamConverter
   # MyParamConverter class taskes  string and returns the correct format
   class MyParamConverter
     def converter(search)
-      p search
+      p CGI.escape(search)
     end
   end
 end

@@ -4,7 +4,7 @@ require 'sinatra/base'
 
 # require './app/models/param_converter.rb'
 # converting = ParamConverter::MyParamConverter.new
-# converting.converter
+# converting.converter('Cool')
 
 
 # This is my controller
