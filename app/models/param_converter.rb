@@ -3,6 +3,8 @@
 module ParamConverter
   # MyParamConverter class taskes  string and returns the correct format
   class MyParamConverter
-    def converter; end
+    def converter
+      p 'It works!'
+    end
   end
 end
