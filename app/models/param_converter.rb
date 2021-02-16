@@ -3,8 +3,10 @@
 module ParamConverter
   # MyParamConverter class taskes  string and returns the correct format
   class MyParamConverter
-    def converter(search)
+    def cgi_converter(search)
       CGI.escape(search)
     end
+
+    def url_converter; end
   end
 end
