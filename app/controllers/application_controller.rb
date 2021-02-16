@@ -6,7 +6,6 @@ require 'sinatra/base'
 # converting = ParamConverter::MyParamConverter.new
 # converting.converter('Cool')
 
-
 # This is my controller
 class LetMeAskMyButler < Sinatra::Base
   configure do
