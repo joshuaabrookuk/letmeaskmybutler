@@ -7,6 +7,8 @@ module ParamConverter
       CGI.escape(search)
     end
 
-    def url_converter; end
+    def url_converter(cgi_search)
+      return "http://localhost:4567/search?search_query=#{cgi_search}"
+    end
   end
 end
