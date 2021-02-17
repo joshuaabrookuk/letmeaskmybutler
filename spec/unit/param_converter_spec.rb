@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './app/models/param_converter'
+require './app/lib/param_converter'
 
 describe ParamConverter::MyParamConverter do
   let(:paramconverter) { ParamConverter::MyParamConverter.new }
@@ -19,8 +19,7 @@ describe ParamConverter::MyParamConverter do
 
   describe '#url_converter' do
     it 'should return a url' do
-        expect(paramconverter.url_converter('Who+is+Frank+Sinatra%3F')).to eq('http://localhost:4567/search?search_query=Who+is+Frank+Sinatra%3F')
-      end
+      expect(paramconverter.url_converter('Who+is+Frank+Sinatra%3F')).to eq('http://localhost:4567/search?search_query=Who+is+Frank+Sinatra%3F')
     end
-
+  end
 end

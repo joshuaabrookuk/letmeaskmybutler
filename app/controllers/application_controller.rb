@@ -2,9 +2,7 @@
 
 require 'sinatra/base'
 
-# require './app/models/param_converter.rb'
-# converting = ParamConverter::MyParamConverter.new
-# converting.converter('Cool')
+require './app/lib/param_converter'
 
 # This is my controller
 class LetMeAskMyButler < Sinatra::Base
@@ -15,10 +13,14 @@ class LetMeAskMyButler < Sinatra::Base
 
   get '/' do
     @search = params[:search]
+    @converting = ParamConverter::MyParamConverter.new
 
     if @search
-      @search_query = CGI.escape(@search)
-      @search_link = "http://localhost:4567/search?search_query=#{@search_query}"
+      # p @converting
+      @search_query = @converting.cgi_converter(@search)
+      # @search_query = CGI.escape(@search)
+      @search_link = @converting.url_converter(@search_query)
+      # @search_link = "http://localhost:4567/search?search_query=#{@search_query}"
     end
     erb :index_merge
   end
