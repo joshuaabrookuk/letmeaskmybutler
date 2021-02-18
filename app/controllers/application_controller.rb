@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'sinatra/base'
-
 require './app/lib/param_converter'
 
 # This is my controller
@@ -12,22 +11,20 @@ class LetMeAskMyButler < Sinatra::Base
   end
 
   get '/' do
-    @search = params[:search]
     @converting = ParamConverter::MyParamConverter.new
+    @search = params[:search]
 
     if @search
-      # p @converting
       @search_query = @converting.cgi_converter(@search)
-      # @search_query = CGI.escape(@search)
       @search_link = @converting.url_converter(@search_query)
-      # @search_link = "http://localhost:4567/search?search_query=#{@search_query}"
     end
     erb :index_merge
   end
 
   get '/redirect' do
+    @converting = ParamConverter::MyParamConverter.new
     @search = params[:search]
-    @search_query = CGI.escape(@search)
+    @search_query = @converting.cgi_converter(@search)
     redirect to("https://uk.ask.com/web?q=#{@search_query}")
     erb :redirect
   end
