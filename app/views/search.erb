@@ -1,34 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Let Me AskMy Butler</title>
-    <link rel="stylesheet" href="/css/master.css">
-  </head>
-  <body>
-    <div align="center">
-      <form action="/redirect">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ask.com_Logo.svg" alt="Ask Logo" width="133" height="97.05">
-        <input type="text" id="search" name="search" value="<%=@search_query%>">
-        <input type="submit" value="Submit">
-      </form>
+<html>
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <div id="grey_background">
+    <div id="white_boarder_padding">
+      <div class="grid-container">
+        <div class="grid-item-1">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ask.com_Logo.svg" alt="Ask Logo" width="133" height="97.05">
+        </div>
+        <form autocomplete="off" action="/redirect">
+          <div class="grid-item-2">
+            <input type="text" id="search" name="search" value="<%=@search_query%>">
+              <input type="image" name="submit" src="/images/mag-glass-button.png" border="0" alt="Submit" style="width: 47px;">
+          </div>
+        </form>
+      </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <div align="center">
-      <%=
-      @search_link
-      %>
-    </div>
-    <br>
-    <br>
-    <div align="center">
-      <%=
-      if @search_link
-      'Copy the link above or try it out yourself'
-      end
-      %>
-    </div>
-  </body>
+</body>
 </html>
