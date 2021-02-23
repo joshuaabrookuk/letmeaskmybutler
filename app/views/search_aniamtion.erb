@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<style>
+  #animation {
+    width: 1px;
+    height: 1px;
+    background-color: red;
+    position: relative; z-index: 100;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-play-state: paused;
+  }
+
+  @keyframes example {
+    0%   {left:0px; top:0px;}
+    25%  {left:190px; top:53px;}
+    50%  {left:190px; top:100px;}
+    100%  {left:790px; top:50px;}
+  }
+</style>
+
+<script>
+
+  function myFunction() {
+    document.getElementById("animation").style.animationPlayState = "running"
+    setTimeout(function(){document.getElementById("animation").style.animationPlayState = "paused";}, 3000);
+    setTimeout(function(){document.getElementById("animation").style.animationPlayState = "running";}, 3000);
+  }
+</script>
+
+
+
+<body onload="myFunction()">
+  <div id="grey_background">
+    <div id="white_boarder_padding">
+      <div id="animation">
+        <img src="/images/Windows96_pixel_cursor.png" alt="Orange">
+      </div>
+      <div class="grid-container">
+      <div class="grid-container">
+        <div class="grid-item-1">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ask.com_Logo.svg" alt="Ask Logo" width="133" height="97.05">
+        </div>
+        <form autocomplete="off" action="/redirect">
+          <div class="grid-item-2">
+            <input type="text" id="search" name="search" value="<%=@search_query%>">
+              <input type="image" name="submit" src="/images/mag-glass-button.png" border="0" alt="Submit" style="width: 47px;">
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

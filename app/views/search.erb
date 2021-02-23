@@ -4,44 +4,37 @@
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 
-<style>
-  #animation {
-    width: 1px;
-    height: 1px;
-    background-color: red;
-    position: relative;
-    animation-name: example;
-    animation-duration: 120s;
-  }
+<script>
 
-  @keyframes example {
-    0%   {left:0px; top:0px;}
-    1%  {left:190px; top:53px;}
-    2%  {left:190px; top:100px;}
-    3%  {left:10000000px; top:1000000px;}
-  }
-</style>
+  function myFunction() {
+
+    var variable = 'Testing <%=@search_query%>';
+    console.log(`${variable}`);
+
+    var i = 0;
+    var txt = 'Lorem ipsum dummy text blabla.';
+    var speed = 50;
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    // setTimeout(function(){document.getElementById("animation").style.animationPlayState = "running";}, 3000);
+
+}
+</script>
 
 
 
-<body>
-  <div id="grey_background">
-    <div id="white_boarder_padding">
-      <div id="animation">
-        <img src="/images/Windows96_pixel_cursor.png" alt="Orange">
-      </div>
-      <div class="grid-container">
-      <div class="grid-container">
-        <div class="grid-item-1">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ask.com_Logo.svg" alt="Ask Logo" width="133" height="97.05">
-        </div>
-        <form autocomplete="off" action="/redirect">
-          <div class="grid-item-2">
-            <input type="text" id="search" name="search" value="<%=@search_query%>">
-              <input type="image" name="submit" src="/images/mag-glass-button.png" border="0" alt="Submit" style="width: 47px;">
-          </div>
-        </form>
-      </div>
-    </div>
+<body onload="myFunction()">
+  <div>
+    <p> Testing </p>
+    <p id="demo"></p>
+  </div>
+
 </body>
 </html>
