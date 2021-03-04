@@ -1,8 +1,8 @@
 # Let Me Ask My Butler
 
-LMAMB is a clone of [Let Me Google That](http://letmegooglethat.com/) with one small diffrence, a nod to the classic search engine AskJeeves.
+LMAMB is a clone of [Let Me Google That](http://letmegooglethat.com/) with one small difference, a nod to the classic search engine AskJeeves.
 
-Here's a mock up I made, which may be aniamte in the future.
+Here's a mock up I made, which may be aniamted in the future.
 ![A Gif](/public/images/LetMeAskMyButlerMockUpGIF100)
 
 **Senario:**
