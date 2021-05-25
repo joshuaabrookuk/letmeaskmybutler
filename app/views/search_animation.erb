@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 
-<style>
+<!-- <style>
   #animation {
     width: 1px;
     height: 1px;
@@ -21,20 +21,25 @@
     50%  {left:190px; top:100px;}
     100%  {left:790px; top:50px;}
   }
-</style>
+</style> -->
 
 <script>
+var i = 0;
+var txt = '<%=@search_query%>';
+var speed = 125;
 
-  function myFunction() {
-    document.getElementById("animation").style.animationPlayState = "running"
-    setTimeout(function(){document.getElementById("animation").style.animationPlayState = "paused";}, 3000);
-    setTimeout(function(){document.getElementById("animation").style.animationPlayState = "running";}, 3000);
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("search").value += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
   }
+}
 </script>
 
 
 
-<body onload="myFunction()">
+<body onload="typeWriter()">
   <div id="grey_background">
     <div id="white_boarder_padding">
       <div id="animation">
@@ -47,7 +52,7 @@
         </div>
         <form autocomplete="off" action="/redirect">
           <div class="grid-item-2">
-            <input type="text" id="search" name="search" value="<%=@search_query%>">
+            <input type="text" id="search" name="search" value="">
               <input type="image" name="submit" src="/images/mag-glass-button.png" border="0" alt="Submit" style="width: 47px;">
           </div>
         </form>

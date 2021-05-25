@@ -31,7 +31,7 @@ class LetMeAskMyButler < Sinatra::Base
 
   get '/search' do
     @search_query = params[:search_query]
-    erb :search
+    erb :search_animation
   end
 
   run! if app_file == $PROGRAM_NAME
