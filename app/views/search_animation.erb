@@ -4,42 +4,71 @@
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 
-<!-- <style>
+<style>
+
   #animation {
     width: 1px;
     height: 1px;
     background-color: red;
     position: relative; z-index: 100;
     animation-name: example;
-    animation-duration: 6s;
-    animation-play-state: paused;
+    animation-duration: 12s;
+    animation-play-state: running;
   }
 
   @keyframes example {
     0%   {left:0px; top:0px;}
-    25%  {left:190px; top:53px;}
-    50%  {left:190px; top:100px;}
+    5%   {left:0px; top:0px;}
+    12%  {left:190px; top:53px;}
+    25%  {left:190px; top:100px;}
+    50%  {left:790px; top:50px;}
     100%  {left:790px; top:50px;}
   }
-</style> -->
+
+</style>
 
 <script>
 var i = 0;
 var txt = '<%=@search_query%>';
 var speed = 125;
+var count = 0
 
 function typeWriter() {
   if (i < txt.length) {
+    count++;
     document.getElementById("search").value += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
+  if (document.getElementById("search").value == txt) {
+    runAnim();
+  }
 }
+
+function submitForm() {
+  document.getElementById("form").submit();
+}
+
+function pauseAnim() {
+  document.getElementById("animation").style.animationPlayState = "paused";
+}
+
+function runAnim() {
+  document.getElementById("animation").style.animationPlayState = "running";
+  setTimeout(function() { submitForm(); }, 2300);
+}
+
+function animSequence() {
+  setTimeout(function() { pauseAnim(); }, 2500);
+  setTimeout(function() { typeWriter(); }, 1500);
+
+}
+
 </script>
 
 
 
-<body onload="typeWriter()">
+<body onload="animSequence()",>
   <div id="grey_background">
     <div id="white_boarder_padding">
       <div id="animation">
@@ -50,7 +79,7 @@ function typeWriter() {
         <div class="grid-item-1">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Ask.com_Logo.svg" alt="Ask Logo" width="133" height="97.05">
         </div>
-        <form autocomplete="off" action="/redirect">
+        <form id="form" autocomplete="off" action="/redirect">
           <div class="grid-item-2">
             <input type="text" id="search" name="search" value="">
               <input type="image" name="submit" src="/images/mag-glass-button.png" border="0" alt="Submit" style="width: 47px;">
