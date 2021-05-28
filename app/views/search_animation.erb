@@ -5,70 +5,51 @@
 </head>
 
 <style>
-
-  #animation {
-    width: 1px;
-    height: 1px;
-    background-color: red;
-    position: relative; z-index: 100;
-    animation-name: example;
-    animation-duration: 12s;
-    animation-play-state: running;
-  }
-
-  @keyframes example {
-    0%   {left:0px; top:0px;}
-    5%   {left:0px; top:0px;}
-    12%  {left:190px; top:53px;}
-    25%  {left:190px; top:100px;}
-    50%  {left:790px; top:50px;}
-    100%  {left:790px; top:50px;}
-  }
-
 </style>
 
+<script src="script_src.js">
+
+</script>
+
 <script>
-var i = 0;
-var txt = '<%=@search_query%>';
-var speed = 125;
-var count = 0
 
-function typeWriter() {
-  if (i < txt.length) {
-    count++;
-    document.getElementById("search").value += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
+var i = 0
+
+function typeWriter () {
+  var txt = '<%=@search_query%>'
+  var speed = 125
+
+  document.getElementById('search').value += txt.charAt(i)
+  i++
+  setTimeout(typeWriter, speed)
+
+  if (document.getElementById('search').value === txt) {
+    runAnim()
   }
-  if (document.getElementById("search").value == txt) {
-    runAnim();
-  }
 }
 
-function submitForm() {
-  document.getElementById("form").submit();
+function pauseAnim () {
+  document.getElementById('animation').style.animationPlayState = 'paused';
 }
 
-function pauseAnim() {
-  document.getElementById("animation").style.animationPlayState = "paused";
+function runAnim () {
+  document.getElementById('animation').style.animationPlayState = 'running';
+
+  setTimeout(function () { submitForm() }, 3100)
 }
 
-function runAnim() {
-  document.getElementById("animation").style.animationPlayState = "running";
-  setTimeout(function() { submitForm(); }, 2300);
+function submitForm () {
+  document.getElementById('form').submit()
 }
 
-function animSequence() {
-  setTimeout(function() { pauseAnim(); }, 2500);
-  setTimeout(function() { typeWriter(); }, 1500);
-
+function animSequence () {
+  setTimeout(function () { pauseAnim() }, 2500)
+  setTimeout(function () { typeWriter() }, 1500)
 }
 
 </script>
 
-
-
-<body onload="animSequence()",>
+<body onload="animSequence()">
   <div id="grey_background">
     <div id="white_boarder_padding">
       <div id="animation">

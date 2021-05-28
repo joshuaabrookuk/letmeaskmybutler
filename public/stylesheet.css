@@ -7,6 +7,25 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+#animation {
+  width: 1px;
+  height: 1px;
+  background-color: red;
+  position: relative; z-index: 100;
+  animation-name: cursor;
+  animation-duration: 12s;
+  animation-play-state: running;
+}
+
+@keyframes cursor {
+  0%   {left:0px; top:0px;}
+  5%   {left:0px; top:0px;}
+  12%  {left:190px; top:53px;}
+  25%  {left:190px; top:100px;}
+  50%  {left:790px; top:50px;}
+  100%  {left:790px; top:50px;}
+}
+
 #white_boarder_padding {
   border: 1px solid #c3c3c3;
   padding: 240px;
