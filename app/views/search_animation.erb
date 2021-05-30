@@ -29,14 +29,21 @@ function typeWriter () {
 }
 
 function pauseAnim () {
-  document.getElementById('animation').style.animationPlayState = 'paused';
+  document.getElementById('animation').style.animationPlayState = 'paused'
 }
 
-function runAnim () {
-  document.getElementById('animation').style.animationPlayState = 'running';
 
-  setTimeout(function () { submitForm() }, 3100)
-}
+var runAnim = (function () {
+  var executed = false
+  return function () {
+    if (!executed) {
+      executed = true
+      document.getElementById('animation').style.animationPlayState = 'running'
+      setTimeout(function () { pauseAnim() }, 3000)
+      setTimeout(function () { submitForm() }, 3000)
+    }
+  }
+})()
 
 function submitForm () {
   document.getElementById('form').submit()
