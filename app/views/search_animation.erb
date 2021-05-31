@@ -49,7 +49,12 @@ function submitForm () {
   document.getElementById('form').submit()
 }
 
+function autoFocusOn () {
+    document.getElementById("search").focus();
+}
+
 function animSequence () {
+  setTimeout(function () { autoFocusOn() }, 1100)
   setTimeout(function () { pauseAnim() }, 2500)
   setTimeout(function () { typeWriter() }, 1500)
 }
