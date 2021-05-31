@@ -17,7 +17,7 @@ var i = 0
 
 function typeWriter () {
   var txt = '<%=@search_query%>'
-  var speed = 125
+  var speed = 200
 
   document.getElementById('search').value += txt.charAt(i)
   i++
@@ -40,7 +40,7 @@ var runAnim = (function () {
       executed = true
       document.getElementById('animation').style.animationPlayState = 'running'
       setTimeout(function () { pauseAnim() }, 3000)
-      setTimeout(function () { submitForm() }, 3000)
+      // setTimeout(function () { submitForm() }, 3000)
     }
   }
 })()
@@ -54,7 +54,7 @@ function autoFocusOn () {
 }
 
 function animSequence () {
-  setTimeout(function () { autoFocusOn() }, 1100)
+  setTimeout(function () { autoFocusOn() }, 1200)
   setTimeout(function () { pauseAnim() }, 2500)
   setTimeout(function () { typeWriter() }, 1500)
 }

@@ -19,9 +19,9 @@ textarea:focus, input:focus{
 
 @keyframes cursor {
   0%   {left:0px; top:0px;}
-  5%   {left:0px; top:0px;}
-  12%  {left:190px; top:53px;}
-  25%  {left:190px; top:100px;}
+  1%   {left:0px; top:0px;}
+  12%  {left:182px; top:53px;}
+  25%  {left:185px; top:100px;}
   50%  {left:790px; top:50px;}
   100%  {left:790px; top:50px;}
 }

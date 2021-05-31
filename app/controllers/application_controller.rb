@@ -18,7 +18,7 @@ class LetMeAskMyButler < Sinatra::Base
       @search_query = @converting.cgi_converter(@search)
       @search_link = @converting.url_converter(@search_query)
     end
-    erb :index_merge
+    erb :index
   end
 
   get '/redirect' do
