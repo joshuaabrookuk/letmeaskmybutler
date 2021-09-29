@@ -8,7 +8,6 @@
 var i = 0
 var txt = '<%=@search_query%>'
 const speed = 200
-var typeFinished = false
 
 function typeWriter () {
 
@@ -17,7 +16,6 @@ function typeWriter () {
   setTimeout(typeWriter, speed)
 
   if (document.getElementById('search').value === txt) {
-    typeFinished = true
     setTimeout(function () { runAnim() }, 1000) // Needed to add setTimeOut to function
   }
 }
@@ -51,9 +49,7 @@ function autoFocusOn () {
 function animSequence () {
   setTimeout(function () { autoFocusOn() }, 1200)
   setTimeout(function () { typeWriter() }, 1500)
-  if (!typeFinished) {
-    setTimeout(function () { pauseAnim() }, 2500)
-  }
+  setTimeout(function () { pauseAnim() }, 2500)
 }
 
 </script>
