@@ -3,33 +3,28 @@
 <head>
   <link rel="stylesheet" href="stylesheet.css">
 </head>
-
-<style>
-</style>
-
-<script src="script_src.js">
-
-</script>
-
 <script>
 
 var i = 0
+var txt = '<%=@search_query%>'
+const speed = 200
+var typeFinished = false
 
 function typeWriter () {
-  var txt = '<%=@search_query%>'
-  var speed = 200
 
   document.getElementById('search').value += txt.charAt(i)
   i++
   setTimeout(typeWriter, speed)
 
   if (document.getElementById('search').value === txt) {
-    runAnim()
+    typeFinished = true
+    setTimeout(function () { runAnim() }, 1000)
   }
 }
 
 function pauseAnim () {
   document.getElementById('animation').style.animationPlayState = 'paused'
+  console.log('pauseAnim')
 }
 
 
@@ -38,8 +33,8 @@ var runAnim = (function () {
   return function () {
     if (!executed) {
       executed = true
+      console.log('runAnim triggered twice')
       document.getElementById('animation').style.animationPlayState = 'running'
-      setTimeout(function () { pauseAnim() }, 3000)
       setTimeout(function () { submitForm() }, 3000)
     }
   }
@@ -55,8 +50,10 @@ function autoFocusOn () {
 
 function animSequence () {
   setTimeout(function () { autoFocusOn() }, 1200)
-  setTimeout(function () { pauseAnim() }, 2500)
   setTimeout(function () { typeWriter() }, 1500)
+  if (!typeFinished) {
+    setTimeout(function () { pauseAnim() }, 2500)
+  }
 }
 
 </script>
