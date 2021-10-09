@@ -3,7 +3,28 @@
 <head>
   <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
+
+<script type="text/javascript">
+
+var txt = '<%=@search_query%>'
+
+function hideDiv() {
+  if (txt == '') {
+    document.getElementById("clipboard").style.display = "none";
+  } else {
+    document.getElementById("clipboard").style.display = "block";
+  }
+}
+
+function copyToClipboard() {
+  var copyText = document.getElementById("clipboardInput");
+  copyText.select();
+  navigator.clipboard.writeText(copyText.value);
+}
+
+</script>
+
+<body onload="hideDiv()">
   <div id="grey_background">
     <div id="white_boarder_padding">
       <div class="grid-container">
@@ -12,18 +33,19 @@
         </div>
         <form autocomplete="off" action="/">
           <div class="grid-item-2">
-            <input type="text" id="search" autofocus='autofocus' name="search">
+            <input class ="search-bar" type="text" id="search" autofocus='autofocus' name="search">
               <input type="image" name="submit" src="/images/mag-glass-button.png" border="0" alt="Submit" style="width: 47px;">
           </div>
         </form>
       </div>
     </div>
     <br>
-    <div align="center">
-      <%= @search_link %>
+    <div id="clipboard" align="center" style="display:none">
+      <input class ="link-bar" type="text" value="<%= @search_link %>" id="clipboardInput">
+      <button class ="copyButton" onclick="copyToClipboard()">&#x2398</button>
       <br>
       <br>
-        <%= 'Copy the link above or try it out yourself' if @search_link %>
+        <%= 'Copy the link above or try it out yourself' if @search_query%>
       </div>
     </div>
 </body>
