@@ -64,12 +64,15 @@ textarea:focus, input:focus{
   height: 30px;
   width: 30px;
   position: relative;
-  top: -1px;
-  /* font-size: 34px;
-  text-align: center;
-  top: 14px;
-  text-indent: -1px;
-  line-height: 1; */
+  top: 4px;
+}
+
+
+
+.copyIcon {
+  position: relative;
+  left: -3px;
+  bottom: -1px;
 }
 
 input[type=image] {
