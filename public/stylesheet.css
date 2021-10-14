@@ -43,7 +43,9 @@ textarea:focus, input:focus{
   display: grid;
   grid-template-columns: 163px 670px;
   width: 100%;
+  position: relative;
   margin: auto;
+  border: 1px solid green;
 }
 
 .search-bar {

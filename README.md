@@ -17,9 +17,16 @@ b). Your search query is typed in one character at a time.<br>
 c). The cursor lazily pans over and submits the search.
 4. The page redirects.
 
-## How to use this repo as it stands
+Currently deplayed at: https://letmeaskmybutler.herokuapp.com/
 
-<!-- 1. Clone this repo and open in your text editor of choice
+Things I still need to work on:
+1. Layout design for scalablity
+2. Cleaner JavaScript
+3. Further optimisation and code clean
+
+<!-- ## How to use this repo as it stands
+
+1. Clone this repo and open in your text editor of choice
 2. run `bundle` to install dependency
 3. navigate to 'http://localhost:4567/' in your favorite browser.
 
