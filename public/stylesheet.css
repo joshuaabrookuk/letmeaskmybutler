@@ -40,9 +40,11 @@ textarea:focus, input:focus{
   border-radius: 0px;
 }
 
-#animation-and-seach {
+#animation-and-search {
   margin: auto;
   width: 50%;
+  position: relative;
+  left: -100px;
 }
 
 .grid-container {

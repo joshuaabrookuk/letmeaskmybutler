@@ -20,9 +20,12 @@ c). The cursor lazily pans over and submits the search.
 Currently deplayed at: https://letmeaskmybutler.herokuapp.com/
 
 Things I still need to work on:
-1. Layout design for scalablity
-2. Cleaner JavaScript
-3. Further optimisation and code clean
+1. Clean up JavaScript.
+2. More suitable bottom padding solution.
+3. Adding links to Github and contact, ect.
+4. Setting up the environment varaible properly and finding a better way to test so that I don't have to commit code to see the changes.
+5. Buying a proper domain?
+6. Further optimisation and code clean.
 
 <!-- ## How to use this repo as it stands
 
