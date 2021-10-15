@@ -8,11 +8,9 @@ textarea:focus, input:focus{
 }
 
 #animation {
-  width: 1px;
-  height: 1px;
-  background-color: red;
-  /* position: relative; z-index: 100; */
-  position: relative
+  width: 0px;
+  height: 0px;
+  position: relative; z-index: 100;
   animation-name: cursor;
   animation-duration: 12s;
   animation-play-state: running;
@@ -29,13 +27,11 @@ textarea:focus, input:focus{
 
 #white_boarder_padding {
   border: 1px solid #c3c3c3;
-  /* padding: 240px; */
   border-radius: 6px;
   background-color: white;
   margin: auto;
   width: 100%;
   padding: 280px 0;
-
 }
 
 #grey_background {
@@ -44,11 +40,14 @@ textarea:focus, input:focus{
   border-radius: 0px;
 }
 
+#animation-and-seach {
+  margin: auto;
+  width: 50%;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 163px 670px;
-  margin: auto;
-  width: 50%;
 }
 
 .search-bar {
@@ -72,8 +71,6 @@ textarea:focus, input:focus{
   position: relative;
   top: 4px;
 }
-
-
 
 .copyIcon {
   position: relative;
