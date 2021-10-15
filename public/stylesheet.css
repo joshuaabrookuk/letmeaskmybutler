@@ -11,7 +11,8 @@ textarea:focus, input:focus{
   width: 1px;
   height: 1px;
   background-color: red;
-  position: relative; z-index: 100;
+  /* position: relative; z-index: 100; */
+  position: relative
   animation-name: cursor;
   animation-duration: 12s;
   animation-play-state: running;
@@ -33,9 +34,7 @@ textarea:focus, input:focus{
   background-color: white;
   margin: auto;
   width: 100%;
-  padding: 250px 0;
-
-
+  padding: 280px 0;
 
 }
 
@@ -50,7 +49,6 @@ textarea:focus, input:focus{
   grid-template-columns: 163px 670px;
   margin: auto;
   width: 50%;
-  border: 1px solid green;
 }
 
 .search-bar {
