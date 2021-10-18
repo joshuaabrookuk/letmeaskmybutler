@@ -40,17 +40,17 @@ function copyToClipboard() {
             </form>
           </div>
         </div>
+        <div id="clipboard" align="center" style="display:none">
+          <input class ="link-bar" type="text" value="<%= @search_link %>" id="clipboardInput">
+          <button class ="copyButton" onclick="copyToClipboard()">
+            <img class ="copyIcon" src="/images/copytoclipboardsvg.svg" width="20" height="20">
+          </button>
+          <br>
+          <br>
+          <p1>Copy the link above and try it out yourself</p1>
+          </div>
     </div>
     <br>
-    <div id="clipboard" align="center" style="display:none">
-      <input class ="link-bar" type="text" value="<%= @search_link %>" id="clipboardInput">
-      <button class ="copyButton" onclick="copyToClipboard()">
-        <img class ="copyIcon" src="/images/copytoclipboardsvg.svg" width="20" height="20">
-      </button>
-      <br>
-      <br>
-      <p1>Copy the link above and try it out yourself</p1>
-      </div>
-    </div>
+  </div>
 </body>
 </html>

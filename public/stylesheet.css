@@ -31,13 +31,11 @@ textarea:focus, input:focus{
   background-color: white;
   margin: auto;
   width: 100%;
-  padding: 280px 0;
+  padding: 20% 0;
 }
 
 #grey_background {
   border: 11px solid transparent;
-  padding: 0px;
-  border-radius: 0px;
 }
 
 #animation-and-search {
