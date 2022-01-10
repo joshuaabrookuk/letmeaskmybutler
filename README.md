@@ -17,7 +17,7 @@ b). Your search query is typed in one character at a time.<br>
 c). The cursor lazily pans over and submits the search.
 4. The page redirects.
 
-Currently deplayed at: https://letmeaskmybutler.herokuapp.com/
+Currently depolyed at: https://letmeaskmybutler.herokuapp.com/
 
 Things I still need to work on:
 1. Clean up JavaScript.
